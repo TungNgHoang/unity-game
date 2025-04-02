@@ -4,25 +4,44 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 5f;
     public float ranSpeed = 8f;
+    private float jumpImpulse = 10f;
+    public float airWalkSpeed = 3f;
+    TouchingDirections touchingDirections;
     public float CurrentMoveSpeed
     {
         get
         {
-            if (IsMoving)
+            if (CanMove)
             {
-                if (IsRunning)
+                if (IsMoving && !touchingDirections.IsOnWall)
                 {
-                    return ranSpeed;
-                } else
-                {
-                    return walkSpeed;
+                    if (touchingDirections.IsGrounded)
+                    {
+                        if (IsRunning)
+                        {
+                            return ranSpeed;
+                        }
+                        else
+                        {
+                            return walkSpeed;
+                        }
+                    }
+                    else
+                    {
+                        return airWalkSpeed;
+                    }
                 }
-            } else
+                else
+                {
+                    return 0;
+                }
+            }
+            else
             {
                 return 0;
             }
@@ -72,6 +91,21 @@ public class PlayerController : MonoBehaviour
     }
     public bool _isFacingRight = true;
 
+    public bool CanMove
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canMove);
+        }
+    }
+
+    public bool IsAlive
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.isAlive);
+        }
+    }
     Rigidbody2D rb;
     Animator animator;
 
@@ -81,6 +115,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // Get the Animator component
         animator = GetComponent<Animator>();
+        // Get the TouchingDirections component
+        touchingDirections = GetComponent<TouchingDirections>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -99,15 +135,23 @@ public class PlayerController : MonoBehaviour
     {
         // Move the player
         rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
+        animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         // Get the value of the input
         moveInput = context.ReadValue<Vector2>();
-        // Move the player
-        IsMoving = moveInput != Vector2.zero;
-        SetFacingDirection(moveInput);
+        if (CanMove)
+        {
+            // Move the player
+            IsMoving = moveInput != Vector2.zero;
+            SetFacingDirection(moveInput);
+        }
+        else 
+        {
+            IsMoving = false;
+        }
     }
 
     private void SetFacingDirection(Vector2 moveInput)
@@ -133,6 +177,23 @@ public class PlayerController : MonoBehaviour
         {
             IsRunning = false;
             walkSpeed /= 2;
+        }
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.started && touchingDirections.IsGrounded && CanMove)
+        {
+            animator.SetTrigger(AnimationStrings.jumpTrigger);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpImpulse);
+        }
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            animator.SetTrigger(AnimationStrings.attackTrigger);
         }
     }
 }

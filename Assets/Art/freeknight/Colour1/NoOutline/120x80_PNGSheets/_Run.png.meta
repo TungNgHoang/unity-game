@@ -110,67 +110,221 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_0"
+      name: _Run_0
       rect:
         serializedVersion: 2
-        x: 63
+        x: 0
         y: 0
-        width: 1137
-        height: 1200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 43afca2c0dbd4c300800000000000000
-      internalID: 271583567214869044
+      spriteID: e91507ed82cbe414090083eff293055d
+      internalID: 1549243681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_1"
+      name: _Run_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 246
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 120
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 72069bc9a654ae450800000000000000
-      internalID: 6118779367934484519
+      spriteID: 101b5cf1e31e81248809df1c9e23339c
+      internalID: 1076181754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_2"
+      name: _Run_2
       rect:
         serializedVersion: 2
-        x: 13
-        y: 182
-        width: 52
-        height: 54
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 240
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2b3fa49626e7492c0800000000000000
-      internalID: -4425773572659940430
+      spriteID: 3f8ef450d8081a846b059d88709e55cc
+      internalID: -88473645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Run_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636187be24bc56c4d932e3ae4a88b267
+      internalID: 826119225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Run_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e965a64821d22468d1c6d9d1fe436f
+      internalID: 1602847279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Run_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff78e77144fed8a42953015f8a1ffb95
+      internalID: 1972810285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Run_6
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae9131b0ae2e324c9d70fa1b4088dd8
+      internalID: 129849895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Run_7
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9e66b27590d174c88d6617a1a79c5f
+      internalID: -167563235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Run_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5d15089c2ebb34f84e8b3a07cd6ce5
+      internalID: -447162506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Run_9
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 120
+        height: 80
+      alignment: 9
+      pivot: {x: 0.47, y: 0.23}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc31ce731052984da13bebefde6403e
+      internalID: 1472739295
       vertices: []
       indices: 
       edges: []
@@ -179,7 +333,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 567e47261bfc13f4491ccab558056d62
     internalID: 0
     vertices: []
     indices: 
@@ -189,9 +343,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u2014Pngtree\u2014samurai ink creative black_6685773_0": 271583567214869044
-      "\u2014Pngtree\u2014samurai ink creative black_6685773_1": 6118779367934484519
-      "\u2014Pngtree\u2014samurai ink creative black_6685773_2": -4425773572659940430
+      _Run_0: 1549243681
+      _Run_1: 1076181754
+      _Run_2: -88473645
+      _Run_3: 826119225
+      _Run_4: 1602847279
+      _Run_5: 1972810285
+      _Run_6: 129849895
+      _Run_7: -167563235
+      _Run_8: -447162506
+      _Run_9: 1472739295
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

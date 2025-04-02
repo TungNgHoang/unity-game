@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 5f;
@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private float jumpImpulse = 10f;
     public float airWalkSpeed = 3f;
     TouchingDirections touchingDirections;
+    Damageable damageable;
+
     public float CurrentMoveSpeed
     {
         get
@@ -106,6 +108,8 @@ public class PlayerController : MonoBehaviour
             return animator.GetBool(AnimationStrings.isAlive);
         }
     }
+
+
     Rigidbody2D rb;
     Animator animator;
 
@@ -117,6 +121,8 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         // Get the TouchingDirections component
         touchingDirections = GetComponent<TouchingDirections>();
+        // Get the Damageable component
+        damageable = GetComponent<Damageable>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -134,7 +140,9 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Move the player
-        rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
+        if (!damageable.LockVelocity)
+            rb.linearVelocity = new Vector2(moveInput.x * CurrentMoveSpeed, rb.linearVelocity.y);
+
         animator.SetFloat(AnimationStrings.yVelocity, rb.linearVelocity.y);
     }
 
@@ -195,5 +203,10 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger(AnimationStrings.attackTrigger);
         }
+    }
+
+    public void OnHit(int damage, Vector2 knockback)
+    {
+        rb.linearVelocity = new Vector2(knockback.x, rb.linearVelocity.y + knockback.y);
     }
 }

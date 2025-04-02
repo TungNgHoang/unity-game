@@ -1,14 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngineInternal;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections))]
+[RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 public class Knight : MonoBehaviour
 {
     public float walkSpeed = 3f;
     public DetectionZone attackZone;
+    public DetectionZone cliffDetectionZone;
     Rigidbody2D rb;
     Animator animator;
     TouchingDirections touchingDirections;
+    Damageable damageable;
     public enum WalkableDirection
     {
         Right,
@@ -61,15 +64,30 @@ public class Knight : MonoBehaviour
         }
     }
 
+    public float AttackCooldown { get
+        {
+            return animator.GetFloat(AnimationStrings.attackCooldown);
+        }
+        private set
+        {
+            animator.SetFloat(AnimationStrings.attackCooldown, Mathf.Max(value, 0));
+        }
+    }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         touchingDirections = GetComponent<TouchingDirections>();
         animator = GetComponent<Animator>();
+        damageable = GetComponent<Damageable>();
     }
     void Update()
     {
         HasTarget = attackZone.detectedColliders.Count > 0;
+        if (AttackCooldown >0)
+        {
+            AttackCooldown -= Time.deltaTime;
+        }
     }
     void FixedUpdate()
     {
@@ -77,10 +95,15 @@ public class Knight : MonoBehaviour
         {
             FlipDirection();
         }
-        if (CanMove)
-            rb.linearVelocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.linearVelocity.y);
-        else
-            rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x, 0, walkStopRate), rb.linearVelocity.y);
+
+        if (!damageable.LockVelocity)
+        {
+            if (CanMove)
+                rb.linearVelocity = new Vector2(walkSpeed * walkDirectionVector.x, rb.linearVelocity.y);
+            else
+                rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x, 0, walkStopRate), rb.linearVelocity.y);
+        }
+
     }
 
     private void FlipDirection()
@@ -99,6 +122,17 @@ public class Knight : MonoBehaviour
         }
     }
 
+    public void OnHit(int damage, Vector2 knockback)
+    {
+        rb.linearVelocity = new Vector2(knockback.x, rb.linearVelocity.y + knockback.y);
+    }
 
+    public void OnCliffDetected()
+    {
+        if (touchingDirections.IsGrounded)
+        {
+            FlipDirection();
+        }
+    }
 
 }

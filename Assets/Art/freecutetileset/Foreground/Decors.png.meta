@@ -110,67 +110,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_0"
+      name: Decors_0
       rect:
         serializedVersion: 2
-        x: 63
+        x: 17
         y: 0
-        width: 1137
-        height: 1200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 73
+        height: 100
+      alignment: 9
+      pivot: {x: 0.48744223, y: 0.4060362}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 43afca2c0dbd4c300800000000000000
-      internalID: 271583567214869044
+      spriteID: 26a4e3f5c1c17b04cb9f81730fefe837
+      internalID: -1685391078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_1"
+      name: Decors_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 246
-        width: 6
-        height: 6
+        x: 114
+        y: 0
+        width: 35
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 72069bc9a654ae450800000000000000
-      internalID: 6118779367934484519
+      spriteID: e877de5fcd088ee4eb6954cee5806fef
+      internalID: -1998737934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_2"
+      name: Decors_2
       rect:
         serializedVersion: 2
-        x: 13
-        y: 182
-        width: 52
-        height: 54
+        x: 177
+        y: 0
+        width: 27
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2b3fa49626e7492c0800000000000000
-      internalID: -4425773572659940430
+      spriteID: e19547dfa3b9dee4dbd79f7c005c666d
+      internalID: -100930307
       vertices: []
       indices: 
       edges: []
@@ -179,7 +179,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9b46b4bb66704ac4cbf007bddb3b5c4b
     internalID: 0
     vertices: []
     indices: 
@@ -189,9 +189,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u2014Pngtree\u2014samurai ink creative black_6685773_0": 271583567214869044
-      "\u2014Pngtree\u2014samurai ink creative black_6685773_1": 6118779367934484519
-      "\u2014Pngtree\u2014samurai ink creative black_6685773_2": -4425773572659940430
+      Decors_0: -1685391078
+      Decors_1: -1998737934
+      Decors_2: -100930307
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

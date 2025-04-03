@@ -213,15 +213,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //Create a function escape this game end back to Menu Scene
-    public void OnEscape(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            // Load the Menu scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
-        }
-    }
+    
 
     public void OnHit(int damage, Vector2 knockback)
     {

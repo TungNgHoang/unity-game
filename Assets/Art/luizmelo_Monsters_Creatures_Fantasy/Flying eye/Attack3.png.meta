@@ -110,67 +110,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_0"
+      name: Attack3_0
       rect:
         serializedVersion: 2
-        x: 63
+        x: 0
         y: 0
-        width: 1137
-        height: 1200
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 43afca2c0dbd4c300800000000000000
-      internalID: 271583567214869044
+      spriteID: 256307e7e9e0e224d88c16644af4f65c
+      internalID: 1723071409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_1"
+      name: Attack3_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 246
-        width: 6
-        height: 6
+        x: 150
+        y: 0
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 72069bc9a654ae450800000000000000
-      internalID: 6118779367934484519
+      spriteID: 67f2371f55ab1d74c94f92e91ddab0a4
+      internalID: 1815331910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_2"
+      name: Attack3_2
       rect:
         serializedVersion: 2
-        x: 13
-        y: 182
-        width: 52
-        height: 54
+        x: 300
+        y: 0
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2b3fa49626e7492c0800000000000000
-      internalID: -4425773572659940430
+      spriteID: 3b30ef1aca49be0488e26c234805abef
+      internalID: 598390927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack3_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a09bd6690a5a1c4983b8722bf14f731
+      internalID: -1173354639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack3_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d14d6435f685041a816dcf2b0c0223
+      internalID: 1225370077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack3_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb849efa584e9df4d90a8e683684b812
+      internalID: 285844081
       vertices: []
       indices: 
       edges: []
@@ -179,7 +245,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ddd811e444ff6334dbd9008bb560595e
     internalID: 0
     vertices: []
     indices: 
@@ -189,9 +255,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u2014Pngtree\u2014samurai ink creative black_6685773_0": 271583567214869044
-      "\u2014Pngtree\u2014samurai ink creative black_6685773_1": 6118779367934484519
-      "\u2014Pngtree\u2014samurai ink creative black_6685773_2": -4425773572659940430
+      Attack3_0: 1723071409
+      Attack3_1: 1815331910
+      Attack3_2: 598390927
+      Attack3_3: -1173354639
+      Attack3_4: 1225370077
+      Attack3_5: 285844081
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

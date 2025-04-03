@@ -45,9 +45,9 @@ public class Knight : MonoBehaviour
         }
     }
 
-    public bool _hasTarget = false;
-    private float walkStopRate = 0.04f;
 
+    private float walkStopRate = 0.04f;
+    public bool _hasTarget = false;
     public bool HasTarget
     {
         get { return _hasTarget; }
@@ -99,7 +99,7 @@ public class Knight : MonoBehaviour
 
         if (!damageable.LockVelocity)
         {
-            if (CanMove)
+            if (CanMove && touchingDirections.IsGrounded)
                 rb.linearVelocity = new Vector2(Mathf.Clamp(
                     rb.linearVelocity.x + (walkAcceleration * walkDirectionVector.x * Time.fixedDeltaTime), -maxSpeed, maxSpeed
                     ), rb.linearVelocity.y);

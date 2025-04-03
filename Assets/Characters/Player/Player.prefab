@@ -101,11 +101,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 316173924406637207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6592afde69bb6c24eb710e9b950ab0f7, type: 3}
+  m_Script: {fileID: 11500000, guid: cdadedbdb5e442b48938e49f4ecf56c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 15
-  knockback: {x: 3, y: 1}
+  attackDamage: 10
+  knockback: {x: 0, y: 0}
 --- !u!1 &1054717791649783124
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,11 +206,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1054717791649783124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6592afde69bb6c24eb710e9b950ab0f7, type: 3}
+  m_Script: {fileID: 11500000, guid: cdadedbdb5e442b48938e49f4ecf56c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 25
-  knockback: {x: 5, y: 0}
+  attackDamage: 10
+  knockback: {x: 0, y: 0}
+--- !u!1 &5374821465762648086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5501191288690004977}
+  m_Layer: 7
+  m_Name: BowAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5501191288690004977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5374821465762648086}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.666, y: -0.199, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3526065068133437561}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6987073003653008606
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +258,8 @@ GameObject:
   - component: {fileID: 5431832176094368526}
   - component: {fileID: 1753665585104197774}
   - component: {fileID: 605881358459480841}
-  - component: {fileID: 4166459604330873718}
+  - component: {fileID: 3148085049011114452}
+  - component: {fileID: 864557210610634305}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -251,6 +283,7 @@ Transform:
   - {fileID: 5119485001188121875}
   - {fileID: 7938270750923949327}
   - {fileID: 5230346246468142866}
+  - {fileID: 5501191288690004977}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4152800067384560958
@@ -365,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: 0}
+  m_Actions: {fileID: -944628639613478452, guid: 51607705e9e808444b2ae7540f04cf58, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -486,6 +519,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b03fbe3f-c0d2-450d-a479-dc7edabf90ab
     m_ActionName: 'Player/Jump[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3852185410075686091}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnRangedAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: aa92d198-179e-42a3-83ba-413e77f6e43f
+    m_ActionName: Player/RangedAttack
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -582,7 +631,7 @@ MonoBehaviour:
   _isGrounded: 0
   _isOnWall: 0
   _isOnCeiling: 0
---- !u!114 &4166459604330873718
+--- !u!114 &3148085049011114452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -591,7 +640,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6987073003653008606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3830400b263381c4d986e11ce39e4ee2, type: 3}
+  m_Script: {fileID: 11500000, guid: c05b388e4a1047743939ec49bedcc9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageableHit:
@@ -601,7 +650,21 @@ MonoBehaviour:
   _heatlh: 100
   _isAlive: 1
   isInvincible: 0
-  invicibilityTimer: 0.5
+  invicibilityTimer: 0.25
+--- !u!114 &864557210610634305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6987073003653008606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0f7114d949afd47851722154978a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchPoint: {fileID: 5501191288690004977}
+  projectilePrefab: {fileID: 3665636097932486635, guid: 4beff49c1fc46544b9e4e3f2dbef73ed, type: 3}
 --- !u!1 &8976338426852269046
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,8 +764,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8976338426852269046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6592afde69bb6c24eb710e9b950ab0f7, type: 3}
+  m_Script: {fileID: 11500000, guid: cdadedbdb5e442b48938e49f4ecf56c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
-  knockback: {x: 3, y: 1}
+  knockback: {x: 0, y: 0}

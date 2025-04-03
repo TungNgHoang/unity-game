@@ -68,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Damage
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fe6290f4a5a4f842b37dfdc48f8be08, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: baecdff95a9d7554b8a0d6c1646f353b, type: 2}
   m_sharedMaterial: {fileID: 4593578578631745169, guid: 9fe6290f4a5a4f842b37dfdc48f8be08, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &8803516043080229884
@@ -149,3 +149,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2471b6a8b655c6b428e09e7bcd00a408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: {x: 0, y: 75, z: 0}
+  timeToFade: 1

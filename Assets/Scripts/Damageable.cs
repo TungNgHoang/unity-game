@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class Damageable : MonoBehaviour
 {
     public UnityEvent<int, Vector2> damageableHit;
+    public UnityEvent<int, int> healthChanged;
 
     Animator animator;
     [SerializeField]
@@ -30,6 +31,7 @@ public class Damageable : MonoBehaviour
         set
         {
             _heatlh = value;
+            healthChanged?.Invoke(_heatlh, _maxHealth);
             if (_heatlh <= 0)
             {
                 IsAlive = false;

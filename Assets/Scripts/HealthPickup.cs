@@ -4,6 +4,12 @@ public class HealthPickup : MonoBehaviour
 {
     public int healthRestored = 20;
     public Vector3 spinRotationSpeed = new Vector3(0, 180, 0);
+    public AudioSource pickupSource;
+
+    private void Awake()
+    {
+            pickupSource = GetComponent<AudioSource>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +25,9 @@ public class HealthPickup : MonoBehaviour
             bool wasHealed = damageable.Heal(healthRestored);
 
             if (wasHealed)
-                Destroy(gameObject);
+                if (pickupSource)
+                    AudioSource.PlayClipAtPoint(pickupSource.clip, transform.position, pickupSource.volume);
+            Destroy(gameObject);
         }
     }
 

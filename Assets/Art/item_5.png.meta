@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 95adad2b9ff9077459d31ef44cce5c01
+guid: 756dcb18b90ebbe48979df97d503d6c2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,89 +110,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_0
+      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_0"
       rect:
         serializedVersion: 2
-        x: 0
+        x: 63
         y: 0
-        width: 150
-        height: 150
+        width: 1137
+        height: 1200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5af806bcf76d6614e8f9d588dc6432aa
-      internalID: -515750363
+      spriteID: 43afca2c0dbd4c300800000000000000
+      internalID: 271583567214869044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_1
+      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_1"
       rect:
         serializedVersion: 2
-        x: 150
-        y: 0
-        width: 150
-        height: 150
+        x: 90
+        y: 246
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c7ca158dc15749e47b4d0fbbfe2ec9aa
-      internalID: 192807188
+      spriteID: 72069bc9a654ae450800000000000000
+      internalID: 6118779367934484519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Death_2
+      name: "\u2014Pngtree\u2014samurai ink creative black_6685773_2"
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 150
-        height: 150
+        x: 13
+        y: 182
+        width: 52
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e5ca4b7ca2b78ec4eb007b00a735585c
-      internalID: -1394915808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_3
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 0
-        width: 150
-        height: 150
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfa0126d14239694297de5aeb46d5d2f
-      internalID: 1239215156
+      spriteID: 2b3fa49626e7492c0800000000000000
+      internalID: -4425773572659940430
       vertices: []
       indices: 
       edges: []
@@ -201,7 +179,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b8d3213ec06ff7941ac7204c075f60da
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -211,10 +189,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Death_0: -515750363
-      Death_1: 192807188
-      Death_2: -1394915808
-      Death_3: 1239215156
+      "\u2014Pngtree\u2014samurai ink creative black_6685773_0": 271583567214869044
+      "\u2014Pngtree\u2014samurai ink creative black_6685773_1": 6118779367934484519
+      "\u2014Pngtree\u2014samurai ink creative black_6685773_2": -4425773572659940430
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

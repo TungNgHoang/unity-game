@@ -205,6 +205,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnRangedAttack(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            animator.SetTrigger(AnimationStrings.rangedAttackTrigger);
+        }
+    }
+
+    //Create a function escape this game end back to Menu Scene
+    public void OnEscape(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            // Load the Menu scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        }
+    }
+
     public void OnHit(int damage, Vector2 knockback)
     {
         rb.linearVelocity = new Vector2(knockback.x, rb.linearVelocity.y + knockback.y);
